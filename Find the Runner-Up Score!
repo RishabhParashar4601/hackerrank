@@ -1,0 +1,14 @@
+'''Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score.
+You are given  scores. Store them in a list and find the score of the runner-up.'''
+
+'''So basically in this question you'll have an array with scores of n students you'll need to find out the runner up
+you'll convert the array into set so it will remove all the duplicate values and then again convert it into list print the second last element after sorting it'''
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    scoreList=list(set(arr))
+    scoreList.sort()
+    print(
+        scoreList[-2]
+    )
