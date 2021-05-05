@@ -1,0 +1,12 @@
+''' SO in this question you will be given three integers x,y,z which are the which represents dimensions of a cuboid along with a fourth one n
+and you'll have to print a list of all possible coordinates given by [i,j,k] on a 3d graph where the sum of i j and k should not be equal to n and 
+0<=i<=x,0<=j<=y,0<=k<=z
+pretty confusing, right? so let me crack the shell, you just need to print all the numbers for each dimension of the cuboid that lies between 0 and that dimension 
+but keep in mind that sum of the dimensions should not be equal to n'''
+
+here's the code
+
+x,y,z=int(input()),int(input()),int(input())
+print(
+    [[i,j,k] for i in range(x+1) for j in range(y+1) for k in range(z+1) if i+j+k!=n]
+  )
